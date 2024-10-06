@@ -71,7 +71,7 @@ app.use(helmet())
 // Listen
 const port = process.env.PORT || 600
 
-httpsServer.listen(port, '0.0.0.0', () => {
+app.listen(port, '0.0.0.0', () => {
   logger.info(`Server running on port ${port}`);
   ObjLog.log(`Server running on port ${port}`);
   logger.info(`Sockets connected on port ${port}`);
