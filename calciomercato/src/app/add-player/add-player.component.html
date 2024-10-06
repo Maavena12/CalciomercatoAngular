@@ -1,0 +1,138 @@
+<app-header></app-header>
+<header class="bg-white shadow">
+  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="space-y-12">
+        <div class="border-b border-gray-900/10 pb-12">
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Player Information</h2>
+          <div class="mt-6 grid grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-12">
+            <div class="sm:col-span-3">
+              <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+              <div class="mt-2">
+                <input type="text" name="first-name" id="first-name" formControlName="firstName" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+    
+            <div class="sm:col-span-3">
+              <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+              <div class="mt-2">
+                <input type="text" name="last-name" id="last-name" formControlName="lastName" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+    
+            <div class="sm:col-span-4">
+              <label for="position" class="block text-sm font-medium leading-6 text-gray-900">Position</label>
+              <div class="mt-2">
+                <input id="position" name="position" type="text" formControlName="position" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="birth_date" class="block text-sm font-medium leading-6 text-gray-900">Birth Date</label>
+              <div class="mt-2">
+                <input id="birth_date" name="birth_date" type="text" formControlName="birth_date" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="playerImage" class="block text-sm font-medium leading-6 text-gray-900">Player Image</label>
+              <div class="mt-2">
+                <input id="playerImage" name="playerImage" type="text" formControlName="playerImage" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="cost" class="block text-sm font-medium leading-6 text-gray-900">Cost</label>
+              <div class="mt-2">
+                <input id="cost" name="cost" type="text" formControlName="cost" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-b border-gray-900/10 pb-12">
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Team Information</h2>
+          <div class="mt-6 grid grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-12">
+            <div class="sm:col-span-3">
+              <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Team Name</label>
+              <div class="mt-2">
+                <input type="text" name="name" id="name" formControlName="name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+    
+            <div class="sm:col-span-3">
+              <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Country</label>
+              <div class="mt-2">
+                <select id="country" name="country" style="background-color: white;" autocomplete="country-name" formControlName="country" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                  <option disabled selected>Choose a Country</option>
+                  <option>Italy</option>
+                </select>
+              </div>
+            </div>
+    
+            <div class="sm:col-span-4">
+              <label for="fundation" class="block text-sm font-medium leading-6 text-gray-900">Fundation</label>
+              <div class="mt-2">
+                <input id="fundation" name="fundation" type="text" formControlName="fundation" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="teamImage" class="block text-sm font-medium leading-6 text-gray-900">Team Image</label>
+              <div class="mt-2">
+                <input id="teamImage" name="teamImage" type="text" formControlName="teamImage" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="games" class="block text-sm font-medium leading-6 text-gray-900">Games</label>
+              <div class="mt-2">
+                <input id="games" name="games" type="text" formControlName="games" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="goals" class="block text-sm font-medium leading-6 text-gray-900">Goals</label>
+              <div class="mt-2">
+                <input id="goals" name="goals" type="text" formControlName="goals" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+    
+            <div class="sm:col-span-4">
+              <label for="assits" class="block text-sm font-medium leading-6 text-gray-900">Assits</label>
+              <div class="mt-2">
+                <input id="assits" name="assits" type="text" formControlName="assits" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="salary" class="block text-sm font-medium leading-6 text-gray-900">Salary</label>
+              <div class="mt-2">
+                <input id="salary" name="salary" type="text" formControlName="salary" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="beginDate" class="block text-sm font-medium leading-6 text-gray-900">Contract Begin Date</label>
+              <div class="mt-2">
+                <input id="beginDate" name="beginDate" type="text" formControlName="beginDate" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+            <div class="sm:col-span-4">
+              <label for="endDate" class="block text-sm font-medium leading-6 text-gray-900">Contract End Date</label>
+              <div class="mt-2">
+                <input id="endDate" name="endDate" type="text" formControlName="endDate" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+        <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+      </div>
+    </form>
+  </div>
+</header>

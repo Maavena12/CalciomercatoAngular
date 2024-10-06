@@ -1,0 +1,47 @@
+<app-header></app-header>
+<header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900">Player Information</h1>
+    </div>
+</header>
+<main>
+  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <div class="mt-6 border-t border-gray-100" style="display: flex;">
+      <img src="{{data.playerImage}}" alt="photo">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Team</h1>
+        <h1 class="text-2xl tracking-tight text-gray-900">{{data.name}}</h1>
+        <img src="{{data.teamImage}}" alt="photo">
+      </div>
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Market Cost: {{data.cost}}</h1>
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Salary: {{data.salary}}</h1>
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Joined: {{formatDate(data.beginDate)}}</h1>
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Expired: {{formatDate(data.endDate)}}</h1>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Games: {{data.games}}</h1>
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Goals: {{data.goals}}</h1>
+        <h1 class="text-xl font-bold tracking-tight text-gray-900">Assits: {{data.assits}}</h1>
+      </div>
+    </div>
+    <div>
+      <div class="mt-6 border-t border-gray-100">
+        <dl class="divide-y divide-gray-100">
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" style="border-color: black;">
+            <dt class="text-sm font-medium leading-6 text-gray-900">Full name</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{data.firstName}} {{data.lastName}}</dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" style="border-color: black;">
+            <dt class="text-sm font-medium leading-6 text-gray-900">Position</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{data.position}}</dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" style="border-color: black;">
+            <dt class="text-sm font-medium leading-6 text-gray-900">Birth date</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{formatDate(data.birth_date)}}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</main>

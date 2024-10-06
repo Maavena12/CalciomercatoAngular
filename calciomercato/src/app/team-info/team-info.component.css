@@ -1,0 +1,36 @@
+img.header {
+    padding-top: 20px;
+    max-width: 150px;
+}
+
+
+header.bg-white.shadow{
+    background: #8f8989;
+}
+
+main{
+    background: #E2DAD6;
+}
+
+li.flex.justify-between.gap-x-6.py-5{
+    border-color: black;
+}
+
+h1.text-3xl.border-t.border-b.border-gray-100.font-bold.tracking-tight.text-gray-900{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-color: black;
+}
+
+p.mt-1.truncate.text-xs.leading-5.text-gray-500{
+    font-weight: bold;
+    color: rgb(61, 60, 60);
+}
+
+p.text-sm.font-semibold.leading-6.text-gray-900{
+    font-weight: bold;
+}
+
+p.text-sm.leading-6.text-gray-900{
+    font-weight: bold;
+}

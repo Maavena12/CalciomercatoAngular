@@ -1,0 +1,11 @@
+header.bg-white.shadow{
+    background: #8f8989;
+}
+
+main{
+    background: #E2DAD6;
+}
+
+li.flex.justify-between.gap-x-6.py-5{
+    border-color: black;
+}
