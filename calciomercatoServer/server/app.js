@@ -19,7 +19,7 @@ const app = express()
 // Middleware
 app.use(
   cors({
-    origin: ['http://localhost:4200', 'http://localhost:600', 'https://localhost:4200'],
+    origin: ['http://localhost:4200', 'http://localhost:600', 'https://localhost:4200', 'https://calciomercato-angular.vercel.app'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     optionsSuccessStatus: 204,
     credentials: true
