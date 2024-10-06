@@ -68,14 +68,6 @@ database
 
 app.use(helmet())
 
-// HTTPS configuration
-const privateKey = fs.readFileSync('C:/Users/pancho/Desktop/Prueba-MeatCode-Mario/Cahub-Back-Tomas/finances-main/cahubDevs/server/src/utils/cert/selfsigned.key', 'utf8')
-const certificate = fs.readFileSync('C:/Users/pancho/Desktop/Prueba-MeatCode-Mario/Cahub-Back-Tomas/finances-main/cahubDevs/server/src/utils/cert/selfsigned.crt', 'utf8')
-const credentials = { key: privateKey, cert: certificate }
-
-// Create HTTPS server
-const httpsServer = https.createServer(credentials, app)
-
 // Listen
 const port = process.env.PORT || 600
 
