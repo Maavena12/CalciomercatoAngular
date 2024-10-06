@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://localhost:600/api',
+    apiUrl: 'https://calciomercatoangular-production.up.railway.app/api',
 };
