@@ -6,7 +6,6 @@
       <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div class="mt-6" style="display: flex;">
-            <img class="header" src="{{teamData.image}}" alt="photo">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
               <h1 class="text-xl font-bold tracking-tight text-gray-900">Country: {{teamData.country}}</h1>
               <h1 class="text-xl font-bold tracking-tight text-gray-900">Fundation: {{teamData.fundation}}</h1>
@@ -26,7 +25,6 @@
               @for(datas of data; track datas.idPlayer){
                 <li class="flex justify-between gap-x-6 py-5">
                   <div class="flex min-w-0 gap-x-4">
-                    <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="{{datas.playerImage}}" alt="">
                     <div class="min-w-0 flex-auto">
                       <p class="text-sm font-semibold leading-6 text-gray-900">{{datas.firstName}} {{datas.lastName}}</p>
                       <p class="mt-1 truncate text-xs leading-5 text-gray-500">Position: {{datas.position}}</p>
