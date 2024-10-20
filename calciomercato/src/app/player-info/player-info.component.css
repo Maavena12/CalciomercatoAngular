@@ -43,3 +43,9 @@ div.mt-6.border-t.border-gray-100{
 div.px-4.py-6.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-0{
     border-color: black;
 }
+
+.team-image {  
+    height: 90px;
+    width: 90px;  
+    border-radius: 4px;  
+}  

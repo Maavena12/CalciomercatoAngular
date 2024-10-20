@@ -34,3 +34,8 @@ p.text-sm.font-semibold.leading-6.text-gray-900{
 p.text-sm.leading-6.text-gray-900{
     font-weight: bold;
 }
+
+.team-image {  
+    width: 150px;  
+    border-radius: 4px;  
+}  

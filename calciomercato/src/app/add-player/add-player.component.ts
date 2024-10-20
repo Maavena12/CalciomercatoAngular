@@ -61,4 +61,8 @@ export class AddPlayerComponent {
     )
   }
 
+  goToHome(){
+    this.router.navigate(['/']);
+  }
+
 }

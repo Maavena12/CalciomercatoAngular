@@ -9,3 +9,10 @@ main{
 li.flex.justify-between.gap-x-6.py-5{
     border-color: black;
 }
+
+.team-image {  
+    height: 40px; /* Puedes ajustar la altura según necesites */  
+    width: 40px;  /* Ajusta el ancho según necesites */  
+    object-fit: cover; /* Mantiene la relación de aspecto */  
+    border-radius: 8px; /* Para esquinas redondeadas, opcional */  
+}  

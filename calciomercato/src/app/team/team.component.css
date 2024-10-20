@@ -26,3 +26,10 @@ p.text-sm.font-semibold.leading-6.text-gray-900{
 p.text-sm.leading-6.text-gray-900{
     font-weight: bold;
 }
+
+.team-image {  
+    height: 40px; /* Puedes ajustar la altura según necesites */  
+    width: 40px;  /* Ajusta el ancho según necesites */  
+    object-fit: cover; /* Mantiene la relación de aspecto */  
+    border-radius: 8px; /* Para esquinas redondeadas, opcional */  
+}  
