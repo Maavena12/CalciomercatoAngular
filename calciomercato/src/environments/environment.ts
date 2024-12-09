@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://calciomercatoangular-production.up.railway.app/api',
+    apiUrl: 'https://calciomercatoangular.onrender.com/api',
 };
