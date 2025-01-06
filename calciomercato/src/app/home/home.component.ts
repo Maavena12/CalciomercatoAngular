@@ -25,24 +25,47 @@ export class HomeComponent {
   pageSizeTeam: number = 5;
   pageIndexTeam: number = 0;
 
+  loadingPlayers: boolean = true;  
+  loadingTeams: boolean = true;  
+  showMessage: boolean = false; 
+
   constructor(private service: ClientHttpService) { }
 
-  ngOnInit(): void {
-    this.service.getPlayers().subscribe(datos => {
-      for(let i = 0; i < datos.length; i++){
-        this.players.push(datos[i])
-      }
-      this.filteredPlayers = this.players
-      this.updatePaginatedItems();
-    })
-    this.service.getTeams().subscribe(datos => {
-      for(let i = 0; i < datos.length; i++){
-        this.teams.push(datos[i])
-      }
-      this.filteredTeams = this.teams
-      this.updatePaginatedItemsTeams();
-    })
-  }
+  ngOnInit(): void {  
+    // Cargar jugadores  
+    const playersTimer = setTimeout(() => {  
+      this.showMessage = true; // Mostrar mensaje si no se carga en 20 segundos  
+    }, 20000);  
+
+    this.service.getPlayers().subscribe(datos => {  
+      this.players = datos; // Asigna directamente los datos  
+      this.filteredPlayers = this.players;  
+      this.updatePaginatedItems();  
+      this.loadingPlayers = false; // Carga completa  
+      clearTimeout(playersTimer); // Limpiar el temporizador  
+    }, (error) => {  
+      console.error('Error al cargar jugadores', error);  
+      this.loadingPlayers = false; // Cambiar a no cargando en caso de error  
+      clearTimeout(playersTimer); // Limpiar el temporizador  
+    });  
+
+    // Cargar equipos  
+    const teamsTimer = setTimeout(() => {  
+      this.showMessage = true; // Mostrar mensaje si no se carga en 20 segundos  
+    }, 20000);  
+
+    this.service.getTeams().subscribe(datos => {  
+      this.teams = datos; // Asigna directamente los datos  
+      this.filteredTeams = this.teams;  
+      this.updatePaginatedItemsTeams();  
+      this.loadingTeams = false; // Carga completa  
+      clearTimeout(teamsTimer); // Limpiar el temporizador  
+    }, (error) => {  
+      console.error('Error al cargar equipos', error);  
+      this.loadingTeams = false; // Cambiar a no cargando en caso de error  
+      clearTimeout(teamsTimer); // Limpiar el temporizador  
+    });  
+  }  
 
   onSearchTermChange(term: string): void {
     this.searchTerm = term;
