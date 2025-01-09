@@ -10,7 +10,10 @@ const connectionData = {
   database: env.PG_DB_NAME,
   password: env.PG_DB_PASSWORD,
   port: env.PG_DB_PORT,
-  ssl: { rejectUnauthorized: false },
+  ssl: {  
+    ca: process.env.PG_DB_CA,  
+    rejectUnauthorized: false,
+  },
 };
 
 const pool = new Pool(connectionData);
