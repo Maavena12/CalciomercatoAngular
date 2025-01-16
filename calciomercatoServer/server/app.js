@@ -42,7 +42,7 @@ app.use(
     cookie: {
       expires: 1800000,
       secure: true,
-    }, // 1 day (1000 ms / sec * 60 sec /1 min * 60 min /1 h * 24 h/1 day)
+    },
   })
 )
 app.use(passport.initialize())
