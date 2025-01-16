@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://calciomercatoangular.onrender.com/api',
+    apiUrl: 'https://calciomercatoangular-gqud.onrender.com/api',
 };
