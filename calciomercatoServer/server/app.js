@@ -19,7 +19,7 @@ const app = express()
 // Middleware
 app.use(
   cors({
-    origin: ['http://localhost:4200', 'http://localhost:600', 'https://localhost:4200', 'https://calciomercato-node-angular.vercel.app', 'https://calciomercatoangular-production.up.railway.app', 'https://calciomercato-angular-3q9ugg4qx-mariosor12s-projects.vercel.app'],
+    origin: ['http://localhost:4200', 'http://localhost:600', 'https://localhost:4200', 'https://calciomercato-node-angular.vercel.app', 'https://calciomercatoangular-production.up.railway.app', 'https://calciomercato-angular-3q9ugg4qx-mariosor12s-projects.vercel.app, https://calciomercato-angular.vercel.app'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     optionsSuccessStatus: 204,
     credentials: true
